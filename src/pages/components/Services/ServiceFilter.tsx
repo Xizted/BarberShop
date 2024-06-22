@@ -7,8 +7,6 @@ const ServiceFilter = () => {
   return (
     <div className='bg-content2 rounded-lg p-6'>
       <Accordion
-        selectionMode='multiple'
-        defaultSelectedKeys={'1'}
         className='w-full'
       >
         <AccordionItem
@@ -18,7 +16,9 @@ const ServiceFilter = () => {
         >
           <div className='grid gap-2'>
             {genders.map((gender) => (
-              <Checkbox color='default'>{gender}</Checkbox>
+              <Checkbox key={gender} color='default'>
+                {gender}
+              </Checkbox>
             ))}
           </div>
         </AccordionItem>

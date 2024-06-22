@@ -1,0 +1,14 @@
+---
+type Props = {
+  children: React.ReactNode;
+};
+
+import { NextUIProvider } from '@nextui-org/react';
+import { ThemeProvider as NextThemesProvider } from 'next-themes';
+---
+
+<NextUIProvider>
+  <NextThemesProvider attribute='class' defaultTheme='dark'>
+    <slot />
+  </NextThemesProvider>
+</NextUIProvider>

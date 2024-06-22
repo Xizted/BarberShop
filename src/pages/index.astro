@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from './components/Header';
+import Hero from './components/Hero.astro';
+import Services from './components/Services/Services.astro';
+import Footer from './components/Footer';
+import ModalService from './components/Services/ModalService';
+---
+
+<Layout title='BarberShop'>
+  <Header client:visible />
+  <Hero />
+  <Services />
+  <Footer client:visible />
+</Layout>
+
+<style>
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+  }
+  * {
+    box-sizing: border-box;
+  }
+</style>

@@ -1,0 +1,88 @@
+---
+import ServiceCard from './ServiceCard.astro';
+import ServiceFilter from './ServiceFilter';
+
+const hairs = [
+  {
+    id: 1,
+    name: 'Classic Cut',
+    price: 25,
+    image: 'https://images.unsplash.com/photo-1568339434343-2a640a1a9946?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    gender: 'Male',
+  },
+  {
+    id: 2,
+    name: 'Buzz Cut',
+    price: 20,
+    image: 'https://images.unsplash.com/photo-1562004760-aceed7bb0fe3?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    gender: 'Male',
+  },
+  {
+    id: 3,
+    name: 'Crew Cut',
+    price: 22,
+    image: 'https://plus.unsplash.com/premium_photo-1661645788141-8196a45fb483?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    gender: 'Male',
+  },
+  {
+    id: 4,
+    name: 'Fade',
+    price: 28,
+    image: 'https://images.unsplash.com/photo-1578390432942-d323db577792?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    gender: 'Male',
+  },
+  {
+    id: 5,
+    name: 'Pompadour',
+    price: 30,
+    image: 'https://images.unsplash.com/photo-1593351918612-fdb3a20b36b6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    gender: 'Male',
+  },
+  {
+    id: 6,
+    name: 'Undercut',
+    price: 27,
+    image: 'https://images.unsplash.com/photo-1599351431408-433ef72fe40b?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    gender: 'Male',
+  },
+  {
+    id: 7,
+    name: 'Side Part',
+    price: 24,
+    image: 'https://images.unsplash.com/photo-1593702275687-f8b402bf1fb5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    gender: 'Male',
+  },
+  {
+    id: 8,
+    name: 'Quiff',
+    price: 29,
+    image: 'https://plus.unsplash.com/premium_photo-1677098576397-d3403bf838a0?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    gender: 'Male',
+  },
+  {
+    id: 9,
+    name: 'Mohawk',
+    price: 35,
+    image: 'https://images.unsplash.com/photo-1589985494639-69e60c82cab2?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    gender: 'Male',
+  },
+  {
+    id: 10,
+    name: 'Comb Over',
+    price: 26,
+    image: 'https://images.unsplash.com/photo-1513956589380-bad6acb9b9d4?q=80&w=1536&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    gender: 'Male',
+  },
+];
+---
+
+<div
+  class='container mx-auto grid grid-cols-1 md:grid-cols-[240px_1fr] gap-8 py-12 px-2'
+>
+  <ServiceFilter />
+  <div
+    class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'
+  >
+    {hairs.map((hair) => <ServiceCard {...hair} />)}
+  </div>
+</div>

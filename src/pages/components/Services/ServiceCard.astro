@@ -1,4 +1,11 @@
 ---
+interface Props {
+  gender: string;
+  image: string;
+  name: string;
+  price: number;
+}
+
 import { Image } from 'astro:assets';
 import { parseNumberToMoney } from '../../../utils/money';
 import Card from './Card';

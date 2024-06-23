@@ -15,7 +15,7 @@ const Card = ({ children, image, title }: CardProps) => {
 
   return (
     <div
-      className='bg-background rounded-lg overflow-hidden shadow-lg hover:cursor-pointer'
+      className='bg-background rounded-lg overflow-hidden shadow-lg hover:cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out'
       onClick={handleOpenChange}
     >
       {children}

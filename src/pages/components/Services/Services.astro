@@ -1,6 +1,5 @@
 ---
 import ServiceCard from './ServiceCard.astro';
-import ServiceFilter from './ServiceFilter';
 
 const hairs = [
   {
@@ -87,9 +86,8 @@ const hairs = [
 ---
 
 <div
-  class='container mx-auto grid grid-cols-1 md:grid-cols-[240px_1fr] gap-8 py-12 px-4'
+  class='container mx-auto grid grid-cols-1 md:grid-cols-1 gap-8 py-12 px-4'
 >
-  <ServiceFilter client:visible />
   <div
     class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'
   >
